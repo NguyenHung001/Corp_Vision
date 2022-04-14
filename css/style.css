@@ -8,6 +8,9 @@ body,html{
     background-color: #151421;
     color: #666;
 }
+path{
+    color: inherit;
+}
 .container{
     width: 100%;
     margin: 0 auto;
@@ -261,8 +264,8 @@ header .navbar .search.toggle.active::after{
 .shape svg {
     width: 100%;
 }
-.shape path{
-    fill: #151421!important;
+.corpCarousel .shape path{
+    fill: #151421 !important;
 }
 /* ABOUT US */
 .about_us__content{
