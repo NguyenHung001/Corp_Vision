@@ -166,10 +166,14 @@ header .navbar .search.toggle::after{
     font-family: fontAwesome;
     line-height: 45px;
     font-size: 24px;
+    color: #eee;
 }
-header .navbar .search.toggle.active::after{
+header .navbar .search.toggle.theme_light::after{
     content: "\f186";
     font-family: fontAwesome;
+    line-height: 45px;
+    font-size: 24px;
+    color: #eee;
 }
 .navbar-toggler{
     padding: 6px 8px 3px;
@@ -177,6 +181,15 @@ header .navbar .search.toggle.active::after{
 }
 .navbar .navbar-toggler:focus {
     outline: 1 rgb(0 166 63 / 25%);
+}
+.navbar .navbar-toggler .open::before{
+    content: "\f00d";
+    padding: 0 2px;
+}
+ .header__content .navbar .navbar-toggler.nav_open{
+    border-color: #fff;
+    border: 2px solid;
+    border-radius: 6px;
 }
 /* CAROUSEL */
 .corpCarousel{

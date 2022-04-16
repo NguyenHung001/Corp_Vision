@@ -43,8 +43,8 @@
                     <span>Corp Vision</span>
                     <span>Vision to your Future</span>
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="fa fa-bars"></span>
+                <button class="navbar-toggler" id="nav-toggle" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="fa fa-bars" id="fa"></span>
                 </button>
               
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -68,7 +68,7 @@
                         <a class="nav-link" href="https://wp.w3layouts.com/corpvision/contact-page/"><span>contact</span></a>
                       </li>
                   </ul>
-                  <div class="search toggle">
+                  <div class="search toggle" id="theme">
                     <i class="fa-solid fa-magnifying-glass"></i>
                   </div>
                 </div>
@@ -691,5 +691,27 @@
   </script>
 
   <script src="./lightbox2-2.11.3/lightbox2-2.11.3/dist/js/lightbox.js"></script>
+
+  <script>
+    var fa_bars = document.getElementById
+    ("fa");
+    fa_bars.onclick = function(){
+      fa_bars.classList.toggle('open')
+    }
+  </script>
+   <script>
+    var navbar_toggle = document.getElementById
+    ("nav-toggle");
+    navbar_toggle.onclick = function(){
+      navbar_toggle.classList.toggle('nav_open')
+    }
+  </script>
+    <script>
+      var theme_header = document.getElementById
+      ("theme");
+      theme_header.onclick = function(){
+        theme_header.classList.toggle('theme_light')
+      }
+    </script>
 </body>
 </html>
