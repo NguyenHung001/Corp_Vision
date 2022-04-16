@@ -172,7 +172,7 @@ header .navbar .search.toggle.active::after{
     font-family: fontAwesome;
 }
 .navbar-toggler{
-    padding: 5px 8px 2px;
+    padding: 6px 8px 3px;
     background-color: #008541;
 }
 .navbar .navbar-toggler:focus {
@@ -888,4 +888,51 @@ footer a:hover{
 .cd-top.text-replace.js-cd-top.cd-top--is-visible.cd-top--fade-out{
     visibility: visible;
     opacity: 1;
+}
+/* REPONSIVE */
+@media screen and (max-width:1200px) {
+    
+}
+@media screen and (max-width:992px) {
+    .navbar-collapse{
+        text-align: center;
+        position: relative;
+    }
+    .navbar-collapse::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 15px;
+        height: 100%;
+        background-color: #222526;
+    }
+    .navbar-collapse .search{
+        position: absolute;
+        top: -50px;
+        right: 50px;
+    }
+    .navbar-collapse ul li:nth-of-type(4){
+        position: relative;
+    }
+    .navbar-collapse ul li:nth-of-type(4) i{
+        position: absolute;
+        right: 30px;
+        transform: translateY(50%);
+    }
+    header.sticky .header__content{
+        background-color: #151421;
+    }
+    header.sticky .navbar-collapse .nav-item.active{
+        color: #62ffb4;
+    }
+}
+@media screen and (max-width:1200px) {
+    
+}
+@media screen and (max-width:768px) {
+    
+}
+@media screen and (max-width:576px) {
+    
 }
