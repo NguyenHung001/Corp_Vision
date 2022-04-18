@@ -1,3 +1,22 @@
+:root{
+    --heading-color:#fff;
+    --background--color: #151421;
+    --background--color--grey: #100f19;
+    --overlay-banner--color: rgba(29, 42, 55, 0.8);
+    --border-radius: 8px;
+    --title-big--color: #fff;
+    --text--color: #c2c2c2;
+
+}
+.theme-light{
+    --heading-color:#3f3a64;
+    --background--color: #fff;
+    --background--color--grey: #f7f7f7;
+    --overlay-banner--color: rgba(29, 42, 55, 0.7);
+    --border-radius: 8px;
+    --title-big--color: #3f3a64;
+    --text--color:#666;
+}
 *{
     margin: 0;
     padding: 0;
@@ -88,7 +107,7 @@ header{
     transition: all 0.4s ease 0s;
 }
 header.sticky{
-    background-color: #151421;
+    background-color: var(--background--color);
     border-bottom: none;
     height: 80px;
     box-shadow: 0 3px 6px 0 rgb(0,0,0,0.05);
@@ -99,6 +118,12 @@ header.sticky .collapse .navbar-nav .nav-item.active .nav-link span{
 header.sticky .navbar{
     padding: 9px 0;
     align-items: center;
+}
+header.sticky .navbar .navbar-brand span:nth-of-type(2),
+header.sticky .navbar .navbar-brand span:last-of-type,
+header.sticky .collapse .navbar-nav .nav-link span,
+header.sticky .collapse .navbar-nav .nav-link i{
+    color: var(--heading-color);
 }
 header .navbar{
     padding: 19px 0;
@@ -168,12 +193,12 @@ header .navbar .search.toggle::after{
     font-size: 24px;
     color: #eee;
 }
-header .navbar .search.toggle.theme_light::after{
+header .navbar .search.toggle.theme_lighticon::after{
     content: "\f186";
     font-family: fontAwesome;
     line-height: 45px;
     font-size: 24px;
-    color: #eee;
+    color: #151421;
 }
 .navbar-toggler{
     padding: 6px 8px 3px;
@@ -999,6 +1024,7 @@ footer a:hover{
     }
     .services .col-lg-4 a:last-of-type {
         top: 64%;
+        
     }
     .projects__img .row .col-lg-4:nth-of-type(2){
         margin-top: 1.5rem;

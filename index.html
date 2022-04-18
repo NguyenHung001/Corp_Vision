@@ -33,7 +33,7 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body id="theme-dark">
     <header class="header__theme">
         <div class="header__content">
           <div class="container">
@@ -708,12 +708,14 @@
       navbar_toggle.classList.toggle('nav_open')
     }
   </script>
-    <script>
-      var theme_header = document.getElementById
-      ("theme");
-      theme_header.onclick = function(){
-        theme_header.classList.toggle('theme_light')
-      }
-    </script>
+  <script>
+    const themeHeader = document.getElementById("theme");
+    const themeHtml = document.getElementById('theme-dark');
+    themeHeader.onclick = function(){
+    themeHeader.classList.toggle('theme_lighticon');
+    themeHtml.classList.toggle('theme-light');
+    }
+  </script>
+
 </body>
 </html>
