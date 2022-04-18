@@ -34,8 +34,8 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body id="theme-dark">
-    <header class="header__theme">
-        <div class="header__content">
+    <header id="header_border" class="header__theme">
+        <div id="headerContent" class="header__content">
           <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="#">
@@ -68,8 +68,9 @@
                         <a class="nav-link" href="https://wp.w3layouts.com/corpvision/contact-page/"><span>contact</span></a>
                       </li>
                   </ul>
-                  <div class="search toggle" id="theme">
+                  <div class="search toggle">
                     <i class="fa-solid fa-magnifying-glass"></i>
+                    <div id="theme"></div>
                   </div>
                 </div>
               </nav>
@@ -690,16 +691,6 @@
     });
   </script>
 
-  <script>
-    const search = document.querySelector('.toggle');
-    const navbar = document.querySelector('.navbar');
-    
-    toggle.onclick = function() {
-      toggle.classList.toggle('active');
-      navbar.classList.toggle('dark');
-    }
-  </script>
-
   <script src="./lightbox2-2.11.3/lightbox2-2.11.3/dist/js/lightbox.js"></script>
 
   <script>
@@ -710,17 +701,21 @@
     }
   </script>
    <script>
-    var navbar_toggle = document.getElementById
-    ("nav-toggle");
+    var navbar_toggle = document.getElementById("nav-toggle");
+    var headerContent = document.getElementById('headerContent');
+    var headerBorder = document.getElementById('header_border');
     navbar_toggle.onclick = function(){
-      navbar_toggle.classList.toggle('nav_open')
+      navbar_toggle.classList.toggle('nav_open');
+      headerContent.style.borderBottom = "1px solid rgba(255, 255, 255, 0.1)";
+      headerBorder.style.border = "0px"
     }
   </script>
   <script>
     const themeHeader = document.getElementById("theme");
     const themeHtml = document.getElementById('theme-dark');
     themeHeader.onclick = function(){
-    themeHeader.classList.toggle('theme_lighticon');
+    themeHeader.classList.toggle('icon');
+    // themeHeader.classList.toggle('theme_lighticon');
     themeHtml.classList.toggle('theme-light');
     }
   </script>
