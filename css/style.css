@@ -125,15 +125,6 @@ header .navbar .navbar-brand span:last-of-type{
     opacity: .9;
     line-height: 1;
 }
-header .collapse .navbar-nav .nav-link span{
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 600;
-    padding: 14px 5px 10px;
-    opacity: .8;
-    transition: all .5s;
-}
 header .collapse .navbar-nav .nav-link:hover span{
     opacity: 1;
 }
@@ -174,6 +165,19 @@ header .navbar .search.toggle.theme_light::after{
     line-height: 45px;
     font-size: 24px;
     color: #eee;
+}
+.navbar-expand-lg .navbar-nav .nav-link span{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 5px 10px;
+    opacity: .8;
+    transition: all .5s;
+}
+.navbar-expand-lg .navbar-nav .nav-link i{
+    color: #fff;
+    font-size: 12px;
 }
 .navbar-toggler{
     padding: 6px 8px 3px;
@@ -217,7 +221,7 @@ header .navbar .search.toggle.theme_light::after{
     z-index: 10;
     color: white;
 }
-.corpCarousel .carousel-inner .carousel-item .carousel-caption h1{
+.carousel-caption h1{
     font-size: 65px;
     line-height: 1.1;
     margin-bottom: 18px;
@@ -225,7 +229,7 @@ header .navbar .search.toggle.theme_light::after{
     font-weight: 600;
     text-align: left;
 }
-.corpCarousel .carousel-inner .carousel-item .carousel-caption p{
+.carousel-caption p{
     font-size: 20px;
     line-height: 30px;
     margin-top: 1.5rem;
@@ -254,7 +258,7 @@ header .navbar .search.toggle.theme_light::after{
     box-shadow: 0 0 15px rgb(0,0,0,0.12);
     cursor: pointer;
     opacity: 1;
-    z-index: 10;
+    z-index: 999999;
 }
 .carousel-control-next-icon, 
 .carousel-control-prev-icon {
@@ -922,20 +926,12 @@ footer a:hover{
     }
     .navbar-collapse{
         text-align: center;
-        position: relative;
+        max-height: calc(100vh - 80px);
+        overflow-y: scroll;
     }
-    .navbar-collapse::after{
-        content: "";
+    .search{
         position: absolute;
-        right: 0;
-        top: 0;
-        width: 15px;
-        height: 100%;
-        background-color: #222526;
-    }
-    .navbar-collapse .search{
-        position: absolute;
-        top: -50px;
+        top: 25px;
         right: 50px;
     }
     .navbar-collapse ul li:nth-of-type(4){
@@ -956,6 +952,9 @@ footer a:hover{
     .corpCarousel .carousel-inner {
         height: 700px;
         position: relative;
+    }
+    .carousel-caption h1{
+        font-size: 50px;
     }
     .features .row .col-lg-6:last-of-type,
     .about_us .row .col-lg-6:last-of-type{
@@ -992,10 +991,16 @@ footer a:hover{
     }
 }
 @media screen and (max-width:768px) {
-    #carouselExampleCaptions,
+    /* #carouselExampleCaptions,
     .corpCarousel .carousel-inner {
         height: 600px;
         position: relative;
+    } */
+    .carousel-caption h1{
+        font-size: 45px;
+    }
+    .carousel-caption p{
+        font-size: 18px;
     }
     .services .col-lg-4 a:last-of-type {
         top: 64%;
