@@ -34,7 +34,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body id="theme-dark">
-    <header id="header_border" class="header__theme">
+    <header id="header_border">
         <div id="headerContent" class="header__content">
           <div class="container">
             <nav class="navbar navbar-expand-lg">
@@ -43,7 +43,7 @@
                     <span>Corp Vision</span>
                     <span>Vision to your Future</span>
                 </a>
-                <button class="navbar-toggler" id="nav-toggle" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" id="nav-toggle" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="no-scroll">
                   <span class="fa fa-bars" id="fa"></span>
                 </button>
               
@@ -700,16 +700,6 @@
       fa_bars.classList.toggle('open')
     }
   </script>
-   <script>
-    var navbar_toggle = document.getElementById("nav-toggle");
-    var headerContent = document.getElementById('headerContent');
-    var headerBorder = document.getElementById('header_border');
-    navbar_toggle.onclick = function(){
-      navbar_toggle.classList.toggle('nav_open');
-      headerContent.style.borderBottom = "1px solid rgba(255, 255, 255, 0.1)";
-      headerBorder.style.border = "0px"
-    }
-  </script>
   <script>
     const themeHeader = document.getElementById("theme");
     const themeHtml = document.getElementById('theme-dark');
@@ -717,6 +707,19 @@
     themeHeader.classList.toggle('icon');
     // themeHeader.classList.toggle('theme_lighticon');
     themeHtml.classList.toggle('theme-light');
+    }
+  </script>
+    <script>
+    var navbar_toggle = document.getElementById("nav-toggle");
+    var headerContent = document.getElementById('headerContent');
+    var headerBorder = document.getElementById('header_border');
+    var noScrollBody = document.getElementById('theme-dark');
+    navbar_toggle.onclick = function(){
+      navbar_toggle.classList.toggle('nav_open');
+      headerContent.style.borderBottom = "1px solid rgba(255, 255, 255, 0.1)";
+      headerBorder.style.border = "0px";
+      noScrollBody.classList.toggle('no-scroll');
+
     }
   </script>
 

@@ -8,7 +8,6 @@
     --text--color: #c2c2c2;
     --border--color:rgba(255, 255, 255, 0.1);
     --border-blog--color:rgba(255, 255, 255, 0.2);
-
 }
 .theme-light{
     --heading-color:#3f3a64;
@@ -972,6 +971,10 @@ footer a:hover{
     }
 }
 @media screen and (max-width:992px) {
+    .no-scroll{
+        min-height: 100vh;
+        overflow: hidden;
+    }
     .container{
         max-width:70%;
         margin: auto;
@@ -990,6 +993,11 @@ footer a:hover{
         top: 25px;
         right: 50px;
     }
+    header.sticky .search{
+        position: absolute;
+        top: 17px;
+        right: 50px;
+    }
     .navbar-collapse ul li:nth-of-type(4){
         position: relative;
     }
@@ -998,8 +1006,19 @@ footer a:hover{
         right: 30px;
         transform: translateY(50%);
     }
+    header .header__content{
+        background-color: #100f1969;
+    }
     header.sticky .header__content{
         background-color: var(--background--color);
+        position: relative;
+        z-index: 999999;
+    }
+    header.sticky .header__content #theme.icon::after{
+        color: #151421;
+    }
+    header .header__content #theme.icon::after{
+        color: #eee;
     }
     header.sticky .navbar-collapse .nav-item.active{
         color: #62ffb4;
@@ -1047,11 +1066,6 @@ footer a:hover{
     }
 }
 @media screen and (max-width:768px) {
-    /* #carouselExampleCaptions,
-    .corpCarousel .carousel-inner {
-        height: 600px;
-        position: relative;
-    } */
     .carousel-caption h1{
         font-size: 45px;
     }
@@ -1087,6 +1101,11 @@ footer a:hover{
         position: fixed;
         right: 20px;
         top: 21px;
+    }
+    .search{
+        position: absolute;
+        top: 17px;
+        right: 50px;
     }
     .corpCarousel {
         height: 600px;
