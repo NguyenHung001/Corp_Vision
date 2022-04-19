@@ -3,7 +3,6 @@
     --background--color: #151421;
     --background--color--grey: #100f19;
     --overlay-banner--color: rgba(29, 42, 55, 0.8);
-    --border-radius: 8px;
     --title-big--color: #fff;
     --text--color: #c2c2c2;
     --border--color:rgba(255, 255, 255, 0.1);
@@ -14,7 +13,6 @@
     --background--color: #fff;
     --background--color--grey: #f7f7f7;
     --overlay-banner--color: rgba(29, 42, 55, 0.7);
-    --border-radius: 8px;
     --title-big--color: #3f3a64;
     --text--color:#666;
     --border--color: #eee;
@@ -1006,8 +1004,8 @@ footer a:hover{
         right: 30px;
         transform: translateY(50%);
     }
-    header .header__content{
-        background-color: #100f1969;
+    .bg-headercontent{
+        background-color: rgba(0, 0, 0, 0.7);
     }
     header.sticky .header__content{
         background-color: var(--background--color);

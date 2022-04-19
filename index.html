@@ -716,10 +716,10 @@
     var noScrollBody = document.getElementById('theme-dark');
     navbar_toggle.onclick = function(){
       navbar_toggle.classList.toggle('nav_open');
+      headerContent.classList.toggle('bg-headercontent')
       headerContent.style.borderBottom = "1px solid rgba(255, 255, 255, 0.1)";
       headerBorder.style.border = "0px";
       noScrollBody.classList.toggle('no-scroll');
-
     }
   </script>
 
