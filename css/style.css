@@ -187,14 +187,14 @@ header .navbar .search i{
     color: #eee;
 }
 header.sticky #theme.icon::after{
-    color: #eee;
+    color: #151421;
 }
 #theme.icon::after{
     content: "\f186";
     font-family: fontAwesome;
     line-height: 45px;
     font-size: 24px;
-    color: #151421;
+    color: #eee;
 }
 .navbar-expand-lg .navbar-nav .nav-link span{
     text-transform: uppercase;
