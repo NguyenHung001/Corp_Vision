@@ -967,6 +967,10 @@ footer a:hover{
         max-width: 1200px;
         margin: auto;
     }
+    .backtotop a{
+        right: 15px;
+        bottom: 15px;
+    }
 }
 @media screen and (max-width:992px) {
     .no-scroll{
@@ -1025,6 +1029,9 @@ footer a:hover{
     .corpCarousel .carousel-inner {
         height: 700px;
         position: relative;
+    }
+    .corpCarousel .carousel-inner .carousel-item .carousel-caption {
+        top: 150px;
     }
     .carousel-caption h1{
         font-size: 50px;
@@ -1105,13 +1112,34 @@ footer a:hover{
         top: 17px;
         right: 50px;
     }
+    #carouselExampleCaptions,
+    .corpCarousel .carousel-inner {
+        height: 550px;
+        position: relative;
+    }
+    .carousel-caption h1 {
+        font-size: 27px;
+    }
     .corpCarousel {
         height: 600px;
     }
     .corpCarousel #carouselExampleCaptions .carousel-inner{
         height: 100%;
     }
+    .corpCarousel .carousel-inner .carousel-item .carousel-caption {
+        top: 100px;
+    }
     .services .col-lg-4 a:last-of-type {
         top: 66%;
+    }
+    .services .col-lg-4 a:last-of-type {
+        top: 56%;
+    }
+    .slick-dots {
+        padding-right: 40px;
+    }
+    .backtotop a{
+        right: 20px;
+        bottom: 40px;
     }
 }
