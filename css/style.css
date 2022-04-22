@@ -127,6 +127,52 @@ header.sticky .collapse .navbar-nav .nav-link span,
 header.sticky .collapse .navbar-nav .nav-link i{
     color: var(--heading-color);
 }
+.navbar-expand-lg .navbar-nav .nav-item:nth-of-type(4){
+    position: relative;
+}
+.navbar-expand-lg .navbar-nav .nav-item:nth-of-type(4) .dropdown-menu{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+    background-color: var(--background--color);
+    padding: 17px 45px 20px 20px;
+    border: 1px solid var(--border--color);
+}
+.dropdown-menu .dropdown-item:hover{
+    background-color: var(--background--color);
+}
+.navbar-expand-lg .navbar-nav .nav-item:nth-of-type(4) .dropdown-menu::before{
+    content: '';
+    width: 14px;
+    height: 14px;
+    background: var(--background--color);
+    border: 1px solid var(--border--color);
+    display: block;
+    border-right: none;
+    border-bottom: none;
+    transform: translateX(-50%) rotateZ(45deg);
+    position: absolute;
+    top: -7px;
+    left: 49%;
+    z-index: 999;
+}
+.navbar-expand-lg .navbar-nav .nav-item:nth-of-type(4) .dropdown-menu .dropdown-item{
+    color: var(--heading-color);
+    font-size: 15px;
+    font-weight: 600;
+    opacity: .8;
+    text-transform: uppercase;
+    padding: 5px 0;
+    transition: all .3s;
+}
+.navbar-expand-lg .navbar-nav .nav-item:nth-of-type(4) .dropdown-menu .dropdown-item:active{
+    color: #00a63f;
+}
+.navbar-expand-lg .navbar-nav .nav-item:nth-of-type(4) .dropdown-menu .dropdown-item:hover{
+    opacity: 1;
+}
 header .navbar{
     padding: 19px 0;
     align-items: center;
@@ -995,6 +1041,12 @@ footer a:hover{
         top: 25px;
         right: 50px;
     }
+    .navbar-expand-lg .navbar-nav .nav-item:nth-of-type(4) .dropdown-menu{
+       text-align: center;
+       width: 85%;
+       position: relative;
+       top: 0;
+    }
     header.sticky .search{
         position: absolute;
         top: 17px;
@@ -1015,6 +1067,7 @@ footer a:hover{
         background-color: var(--background--color);
         position: relative;
         z-index: 999999;
+        height: auto;
     }
     header.sticky .header__content #theme.icon::after{
         color: #151421;
@@ -1078,8 +1131,8 @@ footer a:hover{
         font-size: 18px;
     }
     .services .col-lg-4 a:last-of-type {
-        top: 64%;
-        
+        top: 50%;
+        transform: translate(-50%, 50%);
     }
     .projects__img .row .col-lg-4:nth-of-type(2){
         margin-top: 1.5rem;
@@ -1133,7 +1186,8 @@ footer a:hover{
         top: 66%;
     }
     .services .col-lg-4 a:last-of-type {
-        top: 56%;
+        top: 50%;
+        transform: translate(-50%, 50%);
     }
     .slick-dots {
         padding-right: 40px;
