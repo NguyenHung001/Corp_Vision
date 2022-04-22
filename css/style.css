@@ -1136,6 +1136,9 @@ footer a:hover{
     }
 }
 @media screen and (max-width:768px) {
+    .container{
+        padding: 0;
+    }
     .title-big{
         font-size: 32px;
     }
@@ -1192,7 +1195,10 @@ footer a:hover{
     .search{
         position: absolute;
         top: 17px;
-        right: 35px;
+        right: 46px;
+    }
+    header .navbar .search i{
+        margin-right: 10px;
     }
     #carouselExampleCaptions,
     .corpCarousel .carousel-inner {
@@ -1209,7 +1215,7 @@ footer a:hover{
         height: 100%;
     }
     .corpCarousel .carousel-inner .carousel-item .carousel-caption {
-        left: 0;
+        left: 10%;
     }
     .projects__logo .row .col-4:nth-of-type(4) {
         margin-left: 80px;
@@ -1221,7 +1227,16 @@ footer a:hover{
         margin-bottom: 15px;
     }
     .services .col-lg-4 .service__img a {
-        bottom: -8%;
+        bottom: -11%;
+    }
+    .features .row .col-lg-6:last-of-type {
+        gap: 15px;
+    }
+    .wrap{
+        padding: 1.5rem 1rem;
+    }
+    .wrap h4 a{
+        font-size: 18px;
     }
     .slick-dotted.slick-slider{
         padding-top: 10px;
