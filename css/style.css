@@ -335,6 +335,7 @@ header.sticky #theme.icon::after{
     cursor: pointer;
     opacity: 1;
     z-index: 999999;
+    background-color: var(--background--color);
 }
 .carousel-control-prev-icon::before{
     content: "\f060";
@@ -453,7 +454,7 @@ header.sticky #theme.icon::after{
 .services .col-lg-4 .p-content{
     margin: 35px;
 }
-.services .col-lg-4 a:first-of-type{
+.services .col-lg-4 >a{
     font-size: 16px;
     line-height: 18px;
     font-weight: 600;
@@ -469,7 +470,10 @@ header.sticky #theme.icon::after{
 .services .col-lg-4 a:first-of-type:hover{
     color: #009f4d;
 }
-.services .col-lg-4 a:last-of-type{
+.services .col-lg-4 .service__img{
+    position: relative;
+}
+.services .col-lg-4 .service__img a{
     font-size: 19px;
     line-height: 28px;
     font-weight: 600;
@@ -479,10 +483,10 @@ header.sticky #theme.icon::after{
     display: inline-block;
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 8px;
-    transform: translateY(-25px);
     box-shadow: rgb(1,1,1,0.05) 1px 1px 5px 0px;
     position: absolute;
-    top: 55%;
+    bottom: -10%;
+    transform: translateY(50%);
     left: 50%;
     white-space: nowrap;
     transform: translateX(-50%);
@@ -1043,6 +1047,11 @@ footer a:hover{
         top: 25px;
         right: 50px;
     }
+    header .navbar .search i {
+        height: 40px;
+        width: 40px;
+        line-height: 40px;
+    }
     .navbar-expand-lg .navbar-nav .nav-item:nth-of-type(4) .dropdown-menu{
        text-align: center;
        width: 85%;
@@ -1094,12 +1103,12 @@ footer a:hover{
     }
     .features .row .col-lg-6:last-of-type,
     .about_us .row .col-lg-6:last-of-type{
-        margin-top: 50px;
+        margin-top: 30px;
     }
-    .services .col-lg-4 a:last-of-type{
-        top: 42%;
+    .services .col-lg-4 .service__img a{
         font-size: 17px;
         padding: 10px 30px;
+        height: 50px;
     }
     .services .services__content .row .col-lg-4:last-of-type{
         margin: auto;
@@ -1127,6 +1136,9 @@ footer a:hover{
     }
 }
 @media screen and (max-width:768px) {
+    .title-big{
+        font-size: 32px;
+    }
     .carousel-caption h1{
         font-size: 45px;
     }
@@ -1136,9 +1148,14 @@ footer a:hover{
     .corpCarousel .carousel-inner .carousel-item .carousel-caption{
         left: 10%;
     }
-    .services .col-lg-4 a:last-of-type {
-        top: 50%;
-        transform: translate(-50%, 50%);
+    .services .col-lg-4 .service__img a {
+        bottom: -7%;
+    }
+    .services .services__content .row .col-lg-4:last-of-type {
+        margin-top: 0;
+    }
+    .services .services__content .row .col-lg-4{
+        margin-bottom: 50px;
     }
     .projects__img .row .col-lg-4:nth-of-type(2){
         margin-top: 1.5rem;
@@ -1159,17 +1176,23 @@ footer a:hover{
 }
 @media screen and (max-width:576px) {
     .container{
-        max-width: 100vh;
+        max-width: 100wh;
+    }
+    .title-big{
+        font-size: 26px;
+    }
+    .title-small{
+        margin-bottom: 0;
     }
     .navbar-toggler{
         position: fixed;
-        right: 20px;
+        right: 10%;
         top: 21px;
     }
     .search{
         position: absolute;
         top: 17px;
-        right: 50px;
+        right: 35px;
     }
     #carouselExampleCaptions,
     .corpCarousel .carousel-inner {
@@ -1188,13 +1211,6 @@ footer a:hover{
     .corpCarousel .carousel-inner .carousel-item .carousel-caption {
         left: 0;
     }
-    .services .col-lg-4 a:last-of-type {
-        top: 66%;
-    }
-    .services .col-lg-4 a:last-of-type {
-        top: 50%;
-        transform: translate(-50%, 50%);
-    }
     .projects__logo .row .col-4:nth-of-type(4) {
         margin-left: 80px;
     }
@@ -1204,8 +1220,14 @@ footer a:hover{
     .blog__content .col-lg-4{
         margin-bottom: 15px;
     }
+    .services .col-lg-4 .service__img a {
+        bottom: -8%;
+    }
+    .slick-dotted.slick-slider{
+        padding-top: 10px;
+    }
     .backtotop a{
-        right: 20px;
-        bottom: 40px;
+        right: 10%;
+        bottom: 3%;
     }
 }
