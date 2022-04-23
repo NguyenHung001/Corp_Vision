@@ -1276,7 +1276,7 @@ footer a:hover{
 }
 @media screen and (max-width:480px) {
     .container{
-        padding: 0 15px;
+        padding: 0;
     }
     header .navbar .navbar-brand span:nth-of-type(2) {
         color: #fff;
@@ -1308,7 +1308,7 @@ footer a:hover{
     }
     .corpCarousel .carousel-inner .carousel-item .carousel-caption {
         top: 130px;
-        left: 0;
+        left: 11%;
     }
     .fa-magnifying-glass:before{
         font-size: 13px;
