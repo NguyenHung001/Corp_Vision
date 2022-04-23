@@ -728,7 +728,7 @@ header.sticky #theme.icon::after{
 .testimonials__name h3{
     font-size: 20px;
     font-weight: 600;
-    color: #fff;
+    color: var(--heading-color);
 }
 .testimonials__name p{
     line-height: 0.5;
