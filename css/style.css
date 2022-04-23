@@ -458,7 +458,7 @@ header.sticky #theme.icon::after{
 .services .col-lg-4 .p-content{
     margin: 35px;
 }
-.services .col-lg-4 >a{
+.services .col-lg-4 .btn__service {
     font-size: 16px;
     line-height: 18px;
     font-weight: 600;
@@ -466,12 +466,12 @@ header.sticky #theme.icon::after{
     color: var(--heading-color);
     transition: all .5s;
 }
-.services .col-lg-4 a:focus{
+.services .col-lg-4 .btn__service:focus{
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgb(0 166 63 / 25%);
     border-radius: 8px;
 }
-.services .col-lg-4 a:first-of-type:hover{
+.services .col-lg-4 .btn__service:hover{
     color: #009f4d;
 }
 .services .col-lg-4 .service__img{
@@ -496,7 +496,7 @@ header.sticky #theme.icon::after{
     transform: translateX(-50%);
     transition: all .5s;
 }
-.services .col-lg-4:hover a:last-of-type{
+.services .col-lg-4:hover .service__img >a{
     color: #009f4d;
 }
 /* PROJECTS */
